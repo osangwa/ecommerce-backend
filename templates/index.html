@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .endpoints-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .endpoint-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .endpoint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .endpoint-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .endpoint-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            word-break: break-all;
+        }
+
+        .endpoint-card a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .endpoint-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .footer {
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .endpoints-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🛍️</div>
+            <h1>E-Commerce API</h1>
+            <p class="subtitle">Complete e-commerce backend solution powered by Django REST Framework</p>
+            <div class="status-badge">🚀 System Status: Active & Running</div>
+        </div>
+
+        <div class="features">
+            <span class="feature-tag">JWT Authentication</span>
+            <span class="feature-tag">RESTful API</span>
+            <span class="feature-tag">Product Management</span>
+            <span class="feature-tag">Shopping Cart</span>
+            <span class="feature-tag">Order Processing</span>
+            <span class="feature-tag">User Reviews</span>
+        </div>
+
+        <div class="endpoints-grid">
+            <div class="endpoint-card">
+                <h3>📚 Documentation</h3>
+                <a href="/api/docs/">/api/docs/</a>
+                <p class="endpoint-description">Interactive Swagger UI documentation to explore all API endpoints</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>🔑 Authentication</h3>
+                <a href="/api/auth/">/api/auth/</a>
+                <p class="endpoint-description">User registration, login, JWT token management, and profile handling</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>📦 Products</h3>
+                <a href="/api/products/">/api/products/</a>
+                <p class="endpoint-description">Product catalog, categories, inventory management, and search</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>🛒 Cart</h3>
+                <a href="/api/cart/">/api/cart/</a>
+                <p class="endpoint-description">Shopping cart operations, item management, and cart sessions</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>📋 Orders</h3>
+                <a href="/api/orders/">/api/orders/</a>
+                <p class="endpoint-description">Order creation, tracking, history, and payment processing</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>⭐ Reviews</h3>
+                <a href="/api/reviews/">/api/reviews/</a>
+                <p class="endpoint-description">Product reviews, ratings, wishlist, and user feedback system</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>⚙️ Admin Panel</h3>
+                <a href="/admin/">/admin/</a>
+                <p class="endpoint-description">Django administration interface for managing all data</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h3>📖 Alternative Docs</h3>
+                <a href="/api/redoc/">/api/redoc/</a>
+                <p class="endpoint-description">ReDoc documentation for an alternative viewing experience</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Built with Django REST Framework | Version 1.0</p>
+        </div>
+    </div>
+</body>
+</html>
