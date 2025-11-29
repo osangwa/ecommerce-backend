@@ -27,12 +27,12 @@ INSTALLED_APPS = [
     "drf_yasg",
     "django_filters",
     
-    # Local apps
-    'users',
-    'products',
-    'cart',
-    'orders',
-    'reviews',
+    # Local apps - USE EXPLICIT PATHS
+    'apps.users',
+    'apps.products', 
+    'apps.cart',
+    'apps.orders',
+    'apps.reviews',
 ]
 
 MIDDLEWARE = [
